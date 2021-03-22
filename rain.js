@@ -48,6 +48,8 @@ setup = () => {
   const bg = times[hr].split(',');
   background(bg[0], bg[1], bg[2]);
 
+  $('#drop')[0].attributes.style.value = 'background-color: rgb(' + times[hr] + '); color: rgb(' + times[(hr + 3) % 24] + ');';
+
   textSize(10);
   textFont('Courier New');
 
@@ -71,6 +73,9 @@ ws = () => {
   return arr;
 }
 
+let step = 3.5;
+speed = (v) => step = +v
+
 draw = () => {
 
   const j0 = Math.random() * (w / 75);
@@ -85,7 +90,7 @@ draw = () => {
       const x = arr[i] + j;
       rect(x, y, ww, 10);
     }
-    y += 5;
+    y += step;
   }
   else { setup(); }
 }

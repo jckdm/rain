@@ -8,8 +8,18 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
       <script src="rain.js"></script>
       <title>Rainy ASCII Window</title>
-      <style> html { background-color: #000000; } </style>
+      <style>
+        html { background-color: #000000; }
+        #drop { position: fixed; font-size: 10px; }
+      </style>
   </head>
   <body>
+    <select id="drop" style="" onchange="speed(this.value);">
+      <option value = "1.0">Slowest</option>
+      <option value = "2.0">Slow</option>
+      <option value = "3.5" selected>Normal</option>
+      <option value = "5.0">Fast</option>
+      <option value = "6.5">Fastest</option>
+    </select>
   </body>
 <html>
