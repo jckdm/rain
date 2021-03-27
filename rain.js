@@ -1,7 +1,7 @@
 $(window).resize(() => setTimeout(() => location.reload(true), 1500) );
 
-const w = $(window).width() - 17.5;
-const h = $(window).height() - 17.5;
+const w = $(window).width() - 22;
+const h = $(window).height() - 22;
 
 const ww = w / 50;
 let arr, y;
