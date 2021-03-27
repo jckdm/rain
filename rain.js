@@ -45,15 +45,15 @@ setup = () => {
   const d = new Date();
   const hr = d.getHours();
 
-  const bg = times[hr + 10].split(',');
+  const bg = times[hr].split(',');
   background(bg[0], bg[1], bg[2]);
 
-  $('#drop')[0].attributes.style.value = 'background-color: rgb(' + times[hr + 10] + '); color: rgb(' + times[(hr + 14) % 24] + ');';
+  $('#drop')[0].attributes.style.value = 'background-color: rgb(' + times[hr] + '); color: rgb(' + times[(hr + 3) % 24] + ');';
 
   textSize(10);
   textFont('Courier New');
 
-  const ffill = times[(hr + 11) % 24].split(',');
+  const ffill = times[(hr + 1) % 24].split(',');
   fill(ffill[0], ffill[1], ffill[2]);
 
   for (let i = 0; i < w; i += 8) {
